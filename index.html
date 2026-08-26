@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кафе ВАЙБ — затишне місце з душею в м. Яворів</title>
+
+    <!-- Підключення стилів Bootstrap 3.4.1 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 50px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fcfbf7; /* Ніжний теплий беж */
+            color: #2d4031; /* Глибокий оливково-зелений для тексту */
+        }
+        /* Стилізація банера з теплим природним затемненням */
+        .jumbotron {
+            background: linear-gradient(rgba(45, 64, 49, 0.65), rgba(45, 64, 49, 0.65)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            padding: 130px 0;
+            margin-bottom: 0;
+            border-bottom: 4px solid #c08261;
+        }
+        .jumbotron h1 {
+            font-weight: bold;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .jumbotron p {
+            font-size: 1.3em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        /* Стильна інстаграм-кнопка */
+        .btn-vibe {
+            background-color: #c08261;
+            color: white;
+            font-weight: bold;
+            border: 2px solid #c08261;
+            border-radius: 25px;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-vibe:hover, .btn-vibe:focus {
+            background-color: transparent;
+            color: #c08261;
+            border-color: #c08261;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        /* Картки унікальних переваг кафе */
+        .feature-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e5db;
+            border-radius: 12px;
+            padding: 35px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(45, 64, 49, 0.04);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            min-height: 290px;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(45, 64, 49, 0.1);
+            border-color: #c08261;
+        }
+        /* Відгуки гостей */
+        .review-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e5db;
+            border-top: 4px solid #c08261;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            min-height: 250px;
+            transition: all 0.3s ease;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+        }
+        .stars {
+            color: #f0ad4e;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        /* Футер та карта */
+        footer {
+            background-color: #243328;
+            color: #ebd9c8;
+            padding: 60px 0 30px 0;
+            margin-top: 60px;
+            border-top: 4px solid #c08261;
+        }
+        footer h3 {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .map-box {
+            border: 2px solid #c08261;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Навігаційне меню (Navbar) -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #fcfbf7; border-bottom: 1px solid #e9e5db;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#vibe-navbar">
+                    <span class="icon-bar" style="background-color: #2d4031;"></span>
+                    <span class="icon-bar" style="background-color: #2d4031;"></span>
+                    <span class="icon-bar" style="background-color: #2d4031;"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: #2d4031; font-weight: bold; letter-spacing: 1px;">КАФЕ ВАЙБ</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="vibe-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" style="color: #2d4031; font-weight: 500;">Головна</a></li>
+                    <li><a href="#about" style="color: #2d4031; font-weight: 500;">Про нас</a></li>
+                    <li><a href="#features" style="color: #2d4031; font-weight: 500;">Наші цінності</a></li>
+                    <li><a href="#reviews" style="color: #2d4031; font-weight: 500;">Відгуки гостей</a></li>
+                    <li><a href="#contacts" style="color: #2d4031; font-weight: 500;">Контакти та Карта</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Головний банер (Jumbotron) -->
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1>Кафе «Вайб» ✨</h1>
+            <p class="lead">Місце, де панує щирість, затишна атмосфера та справжня кулінарна душа у серці Яворова</p>
+            <p style="margin-top: 30px;">
+                <a class="btn btn-vibe btn-lg" href="https://instagram.com" target="_blank" role="button">
+                    <span class="glyphicon glyphicon-camera"></span> Наш Instagram
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- 3. Секція "Про нас" -->
+    <div class="container text-center" id="about" style="padding-top: 70px; padding-bottom: 40px;">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 style="font-weight: bold; color: #2d4031; margin-bottom: 20px;">Ласкаво просимо до «Вайбу» 🌿</h2>
+                <p style="font-size: 1.2em; line-height: 1.8; color: #5a6e5f;">
+                    Ми створили наш заклад з величезною любов'ю та відповідальністю перед кожним гостем. Наша місія — дарувати вам не лише бездоганний смак страв, а й затишну домашню атмосферу, куди хочеться повертатися знову і знову. Тут кожен гість відчуває щиру турботу, привітність та справжнє тепло великої родини.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Адаптивна трьохколонкова сітка унікальних цінностей закладу -->
+    <div id="features" style="background-color: #f5f2eb; padding: 70px 0;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <h2 style="margin-bottom: 50px; font-weight: bold; color: #2d4031;">Чому гості обирають нас? 🌟</h2>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Перша колонка -->
+                <div class="col-sm-4">
+                    <div class="feature-card text-center">
+                        <span class="glyphicon glyphicon-heart" style="font-size: 3em; color: #c08261; margin-bottom: 20px;"></span>
+                        <h3>Щирість та Душа</h3>
+                        <p style="color: #5a6e5f; line-height: 1.6;">Особиста турбота від власників закладу, уважний персонал, завжди привітна усмішка та готовність зробити ваше перебування ідеальним.</p>
+                    </div>
+                </div>
+                <!-- Друга колонка -->
+                <div class="col-sm-4">
+                    <div class="feature-card text-center">
+                        <span class="glyphicon glyphicon-fire" style="font-size: 3em; color: #c08261; margin-bottom: 20px;"></span>
+                        <h3>Вишукана кухня</h3>
+                        <p style="color: #5a6e5f; line-height: 1.6;">Страви, продумані до деталей і подані з любов'ю. Наш ніжний шашлик та смачнющі креветки підкорять серце будь-якого гурмана з першого шматочка.</p>
+                    </div>
+                </div>
+                <!-- Третя колонка -->
+                <div class="col-sm-4">
+                    <div class="feature-card text-center">
+                        <span class="glyphicon glyphicon-glass" style="font-size: 3em; color: #c08261; margin-bottom: 20px;"></span>
+                        <h3>Теплі свята</h3>
+                        <p style="color: #5a6e5f; line-height: 1.6;">Найкраще місце для затишних днів народжень та сімейних вечорів. Ми подбаємо, щоб ваше свято було смачним, красивим та по-справжньому родинним.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Блок адаптивних відгуків клієнтів (Reviews) -->
+    <div class="container" id="reviews" style="padding-top: 70px; padding-bottom: 70px;">
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h2 style="margin-bottom: 50px; font-weight: bold; color: #2d4031;">Відгуки наших улюблених гостей 💬</h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Відгук 1 -->
+            <div class="col-sm-4">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p style="font-style: italic; color: #5a6e5f; font-size: 0.95em;">«Хочу щиро поділитися враженнями 🌿 Передусім хочу відзначити власників закладу - добрих, чуйних і надзвичайно відповідальних людей. Це відчувається в усьому: у ставленні до гостей, у турботі про кожну дрібницю. Кухня ❤️ Страви неймовірно смачні, продумані до деталей і подані з любов’ю. Рекомендую від щирого серця!»</p>
+                    <h5 style="font-weight: bold; text-align: right; margin-top: 15px; color: #c08261;">— Олюся Ковалик</h5>
+                </div>
+            </div>
+            <!-- Відгук 2 -->
+            <div class="col-sm-4">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p style="font-style: italic; color: #5a6e5f; font-size: 0.95em;">«Вчора святкували день народження у Вайб, кухня неймовірно смачно, шашлик дуже ніжний, креветки смачнющі, усі страви були на вищому рівні! Обслуговування чудове, дівчатка дуже уважні, старанні! Хочу подякувати усьому персоналу за їхню роботу! 🤗»</p>
+                    <h5 style="font-weight: bold; text-align: right; margin-top: 15px; color: #c08261;">— Наталія Ftf</h5>
+                </div>
+            </div>
+            <!-- Відгук 3 -->
+            <div class="col-sm-4">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p style="font-style: italic; color: #5a6e5f; font-size: 0.95em;">«Дуже все смачно, красиво, приємна атмосфера, офіціанти. Дуже дякуємо, що наше приємне свято зробили сімейним, смачним — все саме так, як ми і планували. Професіоналізм та турбота у кожній страві!»</p>
+                    <h5 style="font-weight: bold; text-align: right; margin-top: 15px; color: #c08261;">— Лідія Черняк</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Контакти та Карта Google Maps (Footer) -->
+    <footer id="contacts">
+        <div class="container">
+            <div class="row">
+                <!-- Карта ліворуч -->
+                <div class="col-sm-6" style="margin-bottom: 40px;">
+                    <h3>Як нас знайти 📍</h3>
+                    <div class="map-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.1932909412953!2d23.38883727693306!3d49.844422030113115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473b64c0db46ba57%3A0x6bfe7c88b7764d8a!2z0L_Qu9C-0YnQsCDQoNC40L3QvtC6LCAyLCDQr9Cy0L7RgNGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgODEwMDA!5e0!3m2!1suk!2sua!4v1787575000000!5m2!1suk!2sua" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <!-- Контактна інформація праворуч -->
+                <div class="col-sm-6" style="margin-bottom: 40px;">
+                    <h3>Контакти та Інформація 📞</h3>
+                    <p style="font-size: 1.15em; margin-bottom: 15px;">
+                        <strong>Адреса:</strong> площа Ринок, 2, м. Яворів, Львівська область, 81000
+                    </p>
+                    <p style="font-size: 1.15em; margin-bottom: 15px;">
+                        <strong>Графік роботи:</strong> Щодня до 21:00
+                    </p>
+                    <p style="font-size: 1.15em; margin-bottom: 15px;">
+                        <strong>Діапазон цін:</strong> 200 – 1 200 ₴
+                    </p>
+                    <p style="font-size: 1.15em; margin-bottom: 15px;">
+                        <strong>Рейтинг на Google Maps:</strong> <span style="color: #f0ad4e; font-weight: bold;">★ 4.8 / 5</span> (на основі 136 відгуків)
+                    </p>
+                    <div class="well" style="background-color: #1e2b21; border-color: #2e4031; color: #ebd9c8; margin-top: 25px;">
+                        <span class="glyphicon glyphicon-info-sign" style="color: #c08261; font-size: 1.2em; margin-right: 8px; vertical-align: middle;"></span>
+                        Бажаєте відсвяткувати важливу подію або забронювати столик? Переходьте за посиланням на наш Instagram або завітайте до нас!
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border-color: #3b4e3e; margin-top: 20px; margin-bottom: 20px;">
+            
+            <div class="row text-center">
+                <div class="col-xs-12">
+                    <p class="text-muted" style="font-size: 0.9em;">&copy; 2026 Кафе ВАЙБ. Навчальний проект з веб-інтеграції. Всі права захищені.</p>
+                    <p style="margin-top: 15px;"><a href="#" class="btn btn-default btn-xs" style="background-color: #2d4031; color: #ebd9c8; border-color: #3b4e3e;">Вгору <span class="glyphicon glyphicon-chevron-up"></span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Підключення бібліотеки jQuery та JS-файлів Bootstrap 3.4.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
